@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:API_Bitcoin.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="900">
+             d:DesignHeight="800" d:DesignWidth="1200">
     <Grid Grid.Row="1" Name="Grid_Crypto" Background="#F98177"
           >
         <Grid>

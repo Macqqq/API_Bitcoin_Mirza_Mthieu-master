@@ -2,66 +2,23 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              xmlns:local="clr-namespace:API_Bitcoin.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
+
     <Grid Background="AliceBlue">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
+        <!-- Configuration des colonnes et des lignes du Grid -->
         <Grid Grid.Row="0" Grid.Column="0" Name="Grid_Courbe1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="8*"/>
-            </Grid.RowDefinitions>
-
+            <!-- Configuration des lignes du Grid_Courbe1 -->
             <Label Content="Bitcoin :" Height="50" Width="200" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-            <Image Name="Img_Courbe1" Width="350" Height="150" Grid.Row="1"/>
+
+            <!-- LiveCharts CartesianChart pour le graphique Bitcoin -->
+            <lvc:CartesianChart Name="ChartBitcoin" HorizontalAlignment="Right" Width="1500"/>
         </Grid>
 
-        <Grid Grid.Row="0" Grid.Column="1" Name="Grid_Courbe2">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="8*"/>
-            </Grid.RowDefinitions>
-
-            <Label Content="Ethereum :" Height="50" Width="200" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-            <Image Name="Img_Courbe2" Width="350" Height="150" Grid.Row="1"/>
-        </Grid>
-
-        <Grid Grid.Row="1" Grid.Column="0" Name="Grid_Croube3">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="8*"/>
-            </Grid.RowDefinitions>
-            <Label Content="XRP :" Height="50" Width="200" FontSize="20" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
-           
-            <Image Name="Img_Courbe3" Width="350" Height="150" Grid.Row="1"/>
-            
-        </Grid>
-
-        <Grid Grid.Row="1" Grid.Column="1" Name="Grid_Croube4">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="8*"/>
-            </Grid.RowDefinitions>
-            
-            <Label Content="Solana :" Height="50" Width="200" FontSize="20" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
-
-            <Image Name="Img_Courbe4" Width="350" Height="150" Grid.Row="1"/>
-
-        </Grid>
-
-
+        <!-- Les autres Grids pour Ethereum, XRP, Solana, etc. -->
+        <!-- ... -->
     </Grid>
-    
 </UserControl>

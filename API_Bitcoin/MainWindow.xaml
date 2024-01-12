@@ -5,67 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:API_Bitcoin"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="900">
+        Title="MainWindow" Height="800" Width="1200">
     <Grid Background="#586BA4">
-        
-            <Grid.RowDefinitions>
-                <RowDefinition Height="3*"/>
-                <!-- Ajout de la définition de ligne -->
-                <RowDefinition Height="6*"/>
-                <RowDefinition Height="1*"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <!-- Ajout de la définition de ligne -->
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-               <!-- ***************************** Zone Menu ************************************* -->
-             <Grid Grid.Row="0" Name="Grd_Name">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width ="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width ="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+        <!-- ***************************** Zone Menu ************************************* -->
+        <Grid Grid.Row="0" Name="Grd_Name">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="1" Width="150" Height="130" Background="#324376" Name="BTN_Tendance" Click="BTN_Tendance_Click">
-                    <StackPanel Orientation="Vertical">
-                        <Image Height="80" Width="80" Source="D:\Mirza ALJIC\SUBRAMANI\C#\API_Bitcoin\API_Bitcoin\Ressources\Image\tendance.png"/>
-                        <Label Content="Tendance" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
-    
-                 <Button Grid.Column="2" Width="150" Height="130" Background="#324376" Name="BTN_IndexFear" Click="BTN_IndexFear_Click">
-                    <StackPanel Orientation="Vertical">
-                        <Image Height="80" Width="80" Source="D:\Mirza ALJIC\SUBRAMANI\C#\API_Bitcoin\API_Bitcoin\Ressources\Image\index_fear2.png"/>
-                        <Label Content="Index Fear" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
-
-                 <Button Grid.Column="0" Width="150" Height="130" Background="#324376" Name="BTN_Crypto" Click="BTN_Crypto_Click" >
-                    <StackPanel Orientation="Vertical">
-                        <Image Height="80" Width="80" Source="D:\Mirza ALJIC\SUBRAMANI\C#\API_Bitcoin\API_Bitcoin\Ressources\Image\btn_crypto.png"/>
-                        <Label Content="Acceuil" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
-
-                <Button Grid.Column="3" Width="150" Height="130" Background="#324376" Name="BTN_Courbe" Click="BTN_Courbe_Click" >
-                     <StackPanel Orientation="Vertical">
-                     <Image Height="80" Width="80" Source="D:\Mirza ALJIC\SUBRAMANI\C#\API_Bitcoin\API_Bitcoin\Ressources\Image\courbe.png"/>
-                     <Label Content="Courbe" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Button Grid.Column="1" Width="150" Height="130" Background="#324376" Name="BTN_Tendance" Click="BTN_Tendance_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Height="80" Width="80" Source="C:\Users\SLAB60\AppData\Local\Temp\1cdaefb8-9c54-42af-b959-354b592423a9_Ressources.zip.3a9\Ressources\Image\icone_info.png"/>
+                    <Label Content="Information" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
 
-        </Grid>
-            
-            <!--*********************************************************** Container ************************************-->
-            <Grid Grid.Row="1" Grid.Column="0" Name="Windows_Container">
-            <Image Source="D:\Mirza ALJIC\SUBRAMANI\C#\API_Bitcoin\API_Bitcoin\Ressources\Image\crypto2.png"/>
+            <Button Grid.Column="2" Width="150" Height="130" Background="#324376" Name="BTN_IndexFear" Click="BTN_IndexFear_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Height="80" Width="80" Source="C:\Users\SLAB60\AppData\Local\Temp\2a48f4fb-5358-42d5-9775-d0af8d084294_Ressources.zip.294\Ressources\Image\index_fear2.png"/>
+                    <Label Content="Index Fear" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
 
+            <Button Grid.Column="0" Width="150" Height="130" Background="#324376" Name="BTN_Crypto" Click="BTN_Crypto_Click" >
+                <StackPanel Orientation="Vertical">
+                    <Image Height="80" Width="80" Source="C:\Users\SLAB60\AppData\Local\Temp\4c08a009-2678-480f-9c1c-8d0befc62da0_Ressources.zip.da0\Ressources\Image\btn_crypto3.png"/>
+                    <Label Content="Acceuil" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Column="3" Width="150" Height="130" Background="#324376" Name="BTN_Courbe" Click="BTN_Courbe_Click" >
+                <StackPanel Orientation="Vertical">
+                    <Image Height="80" Width="80" Source="C:\Users\SLAB60\AppData\Local\Temp\6af73f5b-47ed-4a46-a5f7-c0caf7bbf691_Ressources.zip.691\Ressources\Image\courbe.png"/>
+                    <Label Content="Courbe" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </Grid>
-            <!--*********************************************************** Fin Container ************************************-->
+
         <!--*********************************************************** Container ************************************-->
-        <Grid Grid.Row="2" Grid.Column="0" Name="grid_Footer">
-            <Label Content="API Crypto" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" />
+        <Grid Grid.Row="1" Grid.Column="0" Name="Windows_Container">
+            <Image Source="C:\Users\SLAB60\AppData\Local\Temp\c23cb16a-bf4b-4065-ab78-24e919f9ec4a_Ressources.zip.c4a\Ressources\Image\image_accueil2.jpg"/>
         </Grid>
         <!--*********************************************************** Fin Container ************************************-->
 
-       
-
+        <!--*********************************************************** Container ************************************-->
+        <Grid Grid.Row="2" Grid.Column="0" Name="grid_Footer" >
+            <Label Content="API Cryptomonnaie" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" />
+        </Grid>
+        <!--*********************************************************** Fin Container ************************************-->
     </Grid>
 </Window>
