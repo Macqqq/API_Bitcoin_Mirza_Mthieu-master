@@ -10,7 +10,7 @@ namespace API_Bitcoin.View
 {
     public partial class Page_Graphique : UserControl
     {
-        public Root BitcoinData { get; set; }
+        public List<List<double>> MyArray { get; set; }
 
         public Page_Graphique()
         {
@@ -37,14 +37,15 @@ namespace API_Bitcoin.View
 
         private void ProcessApiResponse(string responseContent)
         {
-            BitcoinData = JsonConvert.DeserializeObject<Root>(responseContent);
+            // Directement désérialiser dans la propriété MyArray
+            MyArray = JsonConvert.DeserializeObject<List<List<double>>>(responseContent);
             UpdateBitcoinChart();
         }
 
         private void UpdateBitcoinChart()
         {
             var chartValues = new ChartValues<double>();
-            foreach (var point in BitcoinData.MyArray)
+            foreach (var point in MyArray)
             {
                 // Supposons que le deuxième élément est le prix
                 chartValues.Add(point[1]);
@@ -59,10 +60,5 @@ namespace API_Bitcoin.View
                 }
             };
         }
-    }
-
-    public class Root
-    {
-        public List<List<double>> MyArray { get; set; }
     }
 }
